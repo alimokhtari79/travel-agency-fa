@@ -1,0 +1,443 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap'); */
+
+@font-face {
+	font-family: Sahel;
+	src: url('./assets/fonts/Sahel.woff');
+}
+
+@font-face {
+	font-family: Sahel_Bold;
+	src: url('./assets/fonts/Sahel-Bold.woff');
+}
+
+:root {
+	--primary-900: #131c27;
+	--primary-400: #4c6e97;
+
+	--white: #fff;
+	--Sahel: 'Sahel';
+	--Sahel__Bold: 'Sahel_Bold';
+}
+
+/* Main Style */
+
+::-webkit-scrollbar {
+	width: 1.12rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #7775;
+	border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #777;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 45%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--Sahel);
+}
+
+h1 {
+	font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+	font-size: 1.9rem;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 3rem;
+	font-weight: normal;
+}
+
+h4,
+h5 {
+	font-size: 2.8rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+button {
+	padding: 1.4rem 6rem;
+	border: none;
+	color: var(--white);
+	background-color: var(--primary-400);
+	cursor: pointer;
+	font-size: 1.5rem;
+	border-radius: 2rem;
+	transition: background 0.7s ease-in-out;
+	font-weight: bold;
+	font-family: var(--Sahel);
+}
+
+button:hover {
+	background-color: #2d4158;
+}
+
+/* Main Style */
+
+/* Main Header */
+
+.main-header {
+	background-color: var(--primary-900);
+	min-height: 10vh;
+	padding: 1.5rem;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.header .logo {
+	margin-left: 1rem;
+	margin-bottom: 1.5rem;
+	font-size: 2.5rem;
+}
+
+.header .logo a {
+	color: #fede00;
+}
+
+.header__items,
+.footer__items {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	width: 90%;
+	padding-top: 0.5rem;
+	direction: rtl;
+}
+
+.header__item a {
+	color: var(--white);
+	transition: all 0.5s ease-in;
+}
+
+.header__item a:hover {
+	color: #777;
+}
+
+button image {
+	font-size: 1rem;
+}
+
+/* Main Header */
+
+/* hero Section */
+
+#hero {
+	min-height: 110vh;
+	background: url('./assets/img/landing-page.jpg') no-repeat center;
+	background-size: cover;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#hero h1 {
+	font-size: 5rem;
+	padding: 0 3rem;
+}
+
+#hero .hero__description {
+	font-weight: normal;
+	padding: 5rem 3rem;
+	max-width: 75rem;
+	direction: rtl;
+}
+
+/* Hero Section */
+
+/* Locations */
+
+#locations {
+	min-height: 120vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+		url('./assets/img/new-york-page.png') no-repeat center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 0 3rem;
+}
+
+#locations .locations__head {
+}
+
+#locations .locations__head h2 {
+	margin: -9rem 0;
+	direction: rtl;
+}
+
+#locations .locations__description {
+	max-width: 70rem;
+	margin: 15rem 0;
+	font-size: 2.5rem;
+	color: #663b34;
+	direction: rtl;
+}
+
+.cloud {
+	height: 60%;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	pointer-events: none;
+}
+
+.moving-cloud-1 {
+	animation: cloudAnimation 3s infinite alternate ease-in-out;
+	z-index: -1;
+}
+
+/* Locations */
+
+/* Benefits */
+
+#benefits {
+	background: url('./assets/img/louver-museum.jpg') no-repeat center;
+	background-size: cover;
+	min-height: 120vh;
+	color: var(--primary-400);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.benefits__description {
+	margin-top: 0;
+}
+
+.benefits__description h1 {
+	margin: 3rem 2rem;
+	display: flex;
+	align-items: center;
+	padding: 3rem;
+	background-color: rgba(255, 255, 255, 0.02);
+	border-radius: 2rem;
+	box-shadow: inset 1px 1px 20px 0px var(--primary-900);
+	text-align: center;
+	direction: rtl;
+}
+
+.carts {
+	display: flex;
+	flex-direction: row;
+	margin: 0rem 0;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.benefits__cart {
+	/* height: 20rem; */
+	color: var(--white);
+	padding: 0.5rem 1rem;
+	text-align: center;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 20rem;
+	margin: 1.5rem;
+	background-color: rgba(19, 28, 39, 0.8);
+	cursor: pointer;
+}
+
+.benefits__cart:hover {
+	box-shadow: 1px 1px 20px 0px var(--primary-900);
+}
+
+.benefits__cart img {
+	height: 4rem;
+	margin: 1.5rem 0;
+}
+
+.benefits__cart strong {
+	font-size: 2rem;
+	direction: rtl;
+}
+
+.benefits__cart h4 {
+	font-size: 3.5rem;
+	color: #fdf3ee;
+}
+
+/* Benefits */
+
+/* Contact */
+
+#contact {
+	min-height: 120vh;
+	background: url('./assets/img/london.jpg') no-repeat center;
+	background-size: cover;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-wrapper {
+	background-color: rgba(19, 28, 39, 0.8);
+	border-radius: 25px;
+}
+
+.form-head {
+	text-align: center;
+	margin: 4rem 0;
+}
+
+.form .form__name,
+.form .form__email {
+	text-align: center;
+	padding: 4rem;
+}
+
+.form label {
+	margin-right: 2rem;
+}
+
+.form .form__input {
+	font-family: var(--Sahel);
+	border: none;
+	padding: 1rem 2rem;
+	width: 30rem;
+	height: 5rem;
+	font-size: 1.7rem;
+	border-radius: 25px;
+	outline: none;
+	direction: rtl;
+}
+
+.form .form__btn {
+	width: 100%;
+	border-radius: 0 0 25px 25px;
+}
+
+/* Contact */
+
+/* Footer */
+
+.main-footer {
+	background-color: var(--primary-900);
+	min-height: 10vh;
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.footer__items {
+	justify-content: space-between;
+	margin: auto;
+	width: 60%;
+}
+
+.footer__item img {
+	height: 30px;
+}
+/* Footer */
+
+/* ################################# */
+
+/* keyframes */
+
+@keyframes cloudAnimation {
+	from {
+		transform: translate(10%, -10%);
+	}
+	to {
+		transform: translate(0%, 0%);
+	}
+}
+
+/* keyframes */
+
+/* Media Query */
+
+@media (min-width: 50rem) {
+	html {
+		font-size: 62.5%;
+	}
+	.header {
+		flex-direction: row;
+		width: 90%;
+		margin: auto;
+	}
+	.header .logo {
+		margin: 0;
+		flex: 1 1 40rem;
+	}
+	.header__items {
+		flex: 1 1 40rem;
+	}
+	#locations .locations__head h2 {
+		padding: 2rem 0;
+	}
+	#locations .locations__description {
+		padding: 0;
+	}
+	#benefits {
+		display: flex;
+		justify-content: center;
+	}
+	.benefits__cart img {
+		height: 5rem;
+	}
+	.moving-cloud-1 {
+		z-index: 1;
+	}
+	.form .form__input {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 31rem) {
+	html {
+		font-size: 45%;
+	}
+}
+
+/* Media Query */
+
+/* ################################# */
